@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Movies and Ratings</title>
+<style type="text/css">
+body,td,th {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.text {
+	color: #FFF;
+}
+
+</style>
+</head>
+
+<body background="http://androidcentral.us/wp-content/uploads/2014/06/low-poly-texture-17.png?x56855" vlink="#FF3300" alink="#00CCCC">
+<div align="center">
+  <p>&nbsp;</p>
+  <table width="650" border="1" cellspacing="5" cellpadding="5">
+    <tr>
+      <td width="610" align="center"><h1 class="text">Here are your Movies and Ratings</h1></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><div class="dropdown">
+        <table width="500" border="1" cellspacing="5" cellpadding="5">
+          <tr>
+            <td><h3>Movie Name</h3></td>
+            <td><h3>Your Rating</h3></td>
+          </tr>
+{% for info in data %}
+          <tr>
+            <td>{{ info.0 }}</td>
+            <td>{{ info.1 }}</td>
+          </tr>
+  {% endfor %}
+        </table>
+      </div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
